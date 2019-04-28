@@ -197,6 +197,10 @@ NSString *const YTKRequestValidationErrorDomain = @"com.yuantiku.request.validat
     return nil;
 }
 
+- (BOOL)precheckResponsObjectWithError:(NSError * _Nullable __autoreleasing *)error {
+    return YES;
+}
+
 - (BOOL)statusCodeValidator {
     NSInteger statusCode = [self responseStatusCode];
     return (statusCode >= 200 && statusCode <= 299);

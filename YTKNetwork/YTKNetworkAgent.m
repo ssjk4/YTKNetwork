@@ -291,6 +291,12 @@
             return result;
         }
     }
+    
+    BOOL precheck = [request precheckResponsObjectWithError:error];
+    if (!precheck || error) {
+        return NO;
+    }
+    
     return YES;
 }
 
