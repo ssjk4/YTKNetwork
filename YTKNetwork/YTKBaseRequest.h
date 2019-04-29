@@ -331,7 +331,7 @@ typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
 
 /**
  sgt branch
- 对请求返回数据进行初步业务逻辑判断，返回false 或 有error则进入requestFail回调，
+ 对请求返回数据进行初步业务逻辑判断并可自定义error，返回false 或 有error则进入requestFail回调，
  该步骤在执行jsonValidator后进行
  */
 - (BOOL)precheckResponsObjectWithError:(NSError **)error;

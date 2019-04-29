@@ -292,8 +292,8 @@
         }
     }
     
-    BOOL precheck = [request precheckResponsObjectWithError:error];
-    if (!precheck || error) {
+    result = [request precheckResponsObjectWithError:error];
+    if (!result || *error) {
         return NO;
     }
     
